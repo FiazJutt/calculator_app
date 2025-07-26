@@ -6,22 +6,22 @@ A modern, high-precision calculator app built with Flutter. Features a sleek dar
 
 - **Modern Design**: Dark theme with rounded buttons and clean typography
 - **Basic Operations**: Addition (+), Subtraction (-), Multiplication (×), Division (÷)
-- **Advanced Functions**: 
+- **Advanced Functions**:
   - Percentage calculations (%) - context-aware like mobile calculators
   - Sign toggle (+/-)
   - All Clear (AC)
   - Backspace (⌫) for precise editing
-- **High-Precision Input**: 
+- **High-Precision Input**:
   - Support for up to 100-digit numbers
   - Enhanced large number calculation capabilities
   - Intelligent overflow handling (up to 1e50)
-- **Smart Display**: 
+- **Smart Display**:
   - Previous expression history
   - Auto-sizing text based on number length
   - Horizontal scrolling for long numbers
   - Tap-to-position cursor functionality
   - Scientific notation for very large results
-- **Error Handling**: 
+- **Error Handling**:
   - Division by zero protection
   - Advanced overflow detection for large numbers
   - Invalid operation handling
@@ -35,12 +35,13 @@ A modern, high-precision calculator app built with Flutter. Features a sleek dar
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="flutter_01.png" alt="Calculator Main Interface" width="300" style="margin: 10px;">
-  <img src="flutter_02.png" alt="Calculator with Large Numbers" width="300" style="margin: 10px;">
+  <img src="flutter_04.png" alt="Calculator Main Interface" width="300" style="margin: 10px;">
+  <img src="flutter_01.png" alt="NA" width="300" style="margin: 10px;">
+  <img src="flutter_02.png" alt="Calculator Cursor Functionality" width="300" style="margin: 10px;">
   <img src="flutter_03.png" alt="Calculator Cursor Functionality" width="300" style="margin: 10px;">
 </div>
 
-*Showcasing the modern dark theme, large number support, and interactive cursor positioning*
+_Showcasing the modern dark theme, large number support, and interactive cursor positioning_
 
 ## 🚀 Getting Started
 
@@ -53,17 +54,20 @@ A modern, high-precision calculator app built with Flutter. Features a sleek dar
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd calculator_app
 ```
 
 2. Get dependencies:
+
 ```bash
 flutter pub get
 ```
 
 3. Run the app:
+
 ```bash
 flutter run
 ```
@@ -169,6 +173,7 @@ flutter drive --target=test_driver/app.dart
 ## 📱 Usage Examples
 
 ### Basic Operations
+
 ```
 2 + 3 = 5
 10 - 4 = 6
@@ -177,12 +182,14 @@ flutter drive --target=test_driver/app.dart
 ```
 
 ### Percentage Calculations
+
 ```
 100 - 20% = 80  (20% of 100 = 20, then 100 - 20)
 50 + 10% = 55   (10% of 50 = 5, then 50 + 5)
 ```
 
 ### Advanced Functions
+
 ```
 42 +/- = -42    (Toggle sign)
 -15 +/- = 15    (Toggle sign back)
@@ -191,12 +198,14 @@ AC              (Clear everything)
 ```
 
 ### Large Number Operations
+
 ```
 123456789012345 + 987654321098765 = 1.11111111011111e+15
 999999999999999 × 999999999999999 = 9.99999999999998e+29
 ```
 
 ### Interactive Features
+
 - **Tap Display**: Tap anywhere on the number display to position cursor
 - **Cursor Editing**: Insert or delete digits at any position
 - **Scientific Notation**: Automatic conversion for numbers ≥ 1e15

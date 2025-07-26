@@ -27,26 +27,47 @@ class CalculatorButton {
         break;
     }
 
+    // Determine if this is an icon button or text button
+    bool isIcon = text == "⌫" || text == "+/-";
+    double fontSize;
+    FontWeight fontWeight;
+    
+    if (isIcon) {
+      fontSize = 28;
+      fontWeight = FontWeight.w300;
+    } else if (text.length > 1) {
+      fontSize = 24;
+      fontWeight = FontWeight.w500;
+    } else {
+      fontSize = 32;
+      fontWeight = FontWeight.w400;
+    }
+
     return Expanded(
       flex: flex,
       child: Container(
-        margin: const EdgeInsets.all(4),
-        height: 80,
-        child: ElevatedButton(
-          onPressed: onPressed,
-          style: ElevatedButton.styleFrom(
-            backgroundColor: backgroundColor,
-            foregroundColor: textColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(40),
+        margin: const EdgeInsets.all(3),
+        child: AspectRatio(
+          aspectRatio: 1.0, // Make buttons perfectly circular
+          child: ElevatedButton(
+            onPressed: onPressed,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: backgroundColor,
+              foregroundColor: textColor,
+              shape: const CircleBorder(),
+              elevation: 0,
+              padding: EdgeInsets.zero,
             ),
-            elevation: 0,
-          ),
-          child: Text(
-            text,
-            style: TextStyle(
-              fontSize: text.length > 1 ? 28 : 36,
-              fontWeight: FontWeight.w400,
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                text,
+                style: TextStyle(
+                  fontSize: fontSize,
+                  fontWeight: fontWeight,
+                ),
+                textAlign: TextAlign.center,
+              ),
             ),
           ),
         ),

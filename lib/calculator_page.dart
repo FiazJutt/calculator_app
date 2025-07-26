@@ -346,7 +346,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
               flex: 2,
               child: Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -385,7 +385,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
             Expanded(
               flex: 3,
               child: Container(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 child: Column(
                   children: [
                     // Row 1: AC, +/-, ⌫, ÷
